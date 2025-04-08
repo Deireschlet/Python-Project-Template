@@ -11,3 +11,5 @@ Whether you're working on a side project, experimenting with a new idea, or just
 - **Logger Setup**: No more manually setting up loggers every time. With our pre-configured logger, you get neat logs in both the console and a rotating log file. Never miss an important error or warning again!
 
 - **Configuration Loader**: Centralized, clean configuration management! Define your project settings in a simple `config.ini` file and access them from anywhere. It’s like having a settings dashboard for your code, but cooler.
+
+⚠️ This project is a work in progress — things might change, break, or magically improve at any time!
