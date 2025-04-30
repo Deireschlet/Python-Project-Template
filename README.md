@@ -12,4 +12,28 @@ Whether you're working on a side project, experimenting with a new idea, or just
 
 - **Configuration Loader**: Centralized, clean configuration management! Define your project settings in a simple `config.ini` file and access them from anywhere. It’s like having a settings dashboard for your code, but cooler.
 
+### Password Encryption Script – How to Use
+
+This script helps you securely store an **encrypted password or phrase** in a `.env` file using a generated encryption key (`pass.key`). It keeps sensitive data out of version control while still allowing secure access in your project.
+
+#### How to use it:
+
+1. **Run the script**  
+   This will:
+   - Prompt you for a password
+   - Create `pass.key` (if it doesn't exist)
+   - Encrypt the password
+   - Save it to a `.env` file under `ENCRYPTED_PASSWORD`
+
+2. **Use the password in your code**  
+   Import the required functions and load the `.env`:
+   ```python
+   from dotenv import load_dotenv
+   from setup.utils import decrypt_password, load_key
+   import os
+
+   load_dotenv()
+   encrypted_pw = os.getenv("ENCRYPTED_PASSWORD")
+   password = decrypt_password(encrypted_pw, load_key())
+
 ⚠️ This project is a work in progress — things might change, break, or magically improve at any time!
